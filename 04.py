@@ -168,7 +168,7 @@ if __name__ == '__main__':
     e1 = queue1.get()
     e2 = queue2.get()
     
-    print(f"\n_________{' _'*50}\n\n cProfile:\n")   # to make console more readable
+    print(f"\n__________{' _'*50}\n\n cProfile:\n")   # to make console more readable
     profiler.print_stats()  # print profiler stats
     
     # create bar chart for the 1st evaluation
