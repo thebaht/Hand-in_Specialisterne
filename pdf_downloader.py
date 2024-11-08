@@ -265,6 +265,6 @@ for i, (brnum, row) in enumerate(df.iterrows()):   # iterate through dataframe w
     
 
 # start main program logic _________________________________________________________________________________________________________________________
-thread = threading.Thread(target=main, daemon=True) # run main() in a different thread than gui, to ensure gui responsiveness
+thread = threading.Thread(target=main, daemon=True) # run main() in a different thread than gui, to ensure gui responsiveness. Only applies while downloading though, ui still freezes up when creating labels for so many links
 thread.start()  
 root.mainloop() # start gui
