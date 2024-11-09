@@ -72,16 +72,6 @@ def download(path, brnum, url, alt_url=pd.NA):
         session.close() # after download has concluded, close the session
 
 
-def daemon_thread_factory():    
-    """Generates threads tagged as daemon, for main()
-    """
-    def create_daemon_thread(*args, **kwargs):
-        thread = threading.Thread(*args, **kwargs)
-        thread.daemon = True
-        return thread
-    return create_daemon_thread()
-
-
 def main():
     """Iterates through the dataframe with links, creates labels for each, starts the download in seperate threads, then writes the status of each file to a new file.
     """
@@ -95,6 +85,7 @@ def main():
         label.grid(row=r, column=c, padx=6, pady=2) # place label at the determined spot in the grid
         labels[brnum]=label # add reference to label in labels
         nums.add(brnum) # add brnum to set of all brnums
+        
         if brnum in downloaded:                     # if file already downloaded
             labels[brnum].config(image=check_icon)  # update the icon
             continue                                # continue to next file
