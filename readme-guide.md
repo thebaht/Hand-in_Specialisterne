@@ -1,6 +1,7 @@
 # PDF Downloader: Guide
 
-* When running the program, select the .xlsx file when prompted.
+* Run the program, either through the portable .exe, or the python script.
+* Select the .xlsx file when prompted.
 * Afterwards the program will start gathering the download links from the file.
 
   When "Download: *Getting ready..*" changes to "Download: *In Progress..*", the will start downloading the files.
